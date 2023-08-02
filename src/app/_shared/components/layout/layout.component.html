@@ -1,0 +1,29 @@
+<mat-toolbar color="accent" class="d-flex justify-content-center w-100">
+  <a
+    mat-button
+    [color]="rla.isActive ? 'primary' : ''"
+    routerLink="/instructions"
+    [routerLinkActive]="['is-active']"
+    #rla="routerLinkActive"
+  >
+    INSTRUÇÕES
+  </a>
+  <a
+    mat-button
+    [color]="rla.isActive ? 'primary' : ''"
+    routerLink="/bene-arte-cafe"
+    [routerLinkActive]="['is-active']"
+    #rla="routerLinkActive"
+    >BENÊ ARTE E CAFÉ</a
+  >
+  <a
+    mat-button
+    [color]="rla.isActive ? 'primary' : ''"
+    routerLink="/menu"
+    [routerLinkActive]="['is-active']"
+    #rla="routerLinkActive"
+    >CARDÁPIO</a
+  >
+</mat-toolbar>
+
+<router-outlet></router-outlet>

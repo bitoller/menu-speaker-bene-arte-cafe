@@ -1,0 +1,11 @@
+@import "./../../../../palette.scss";
+
+$height: 64px;
+
+.mat-toolbar-row {
+  height: $height;
+}
+
+.is-active {
+  font-weight: bold;
+}

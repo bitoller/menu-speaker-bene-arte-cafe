@@ -1,0 +1,71 @@
+@use "@angular/material" as mat;
+@import "./palette.scss";
+
+$custom-palette: (
+  50: lighten($primary, 25%),
+  100: lighten($primary, 20%),
+  200: lighten($primary, 15%),
+  300: lighten($primary, 10%),
+  400: lighten($primary, 5%),
+  500: $primary,
+  600: darken($primary, 10%),
+  700: darken($primary, 15%),
+  800: darken($primary, 20%),
+  900: darken($primary, 25%),
+  contrast: (
+    50: $text,
+    100: $text,
+    200: $text,
+    300: $text,
+    400: $text,
+    500: $text,
+    600: $text,
+    700: $text,
+    800: $text,
+    900: $text,
+  ),
+);
+
+$custom-palette-accent: (
+  50: lighten($accent, 25%),
+  100: lighten($accent, 20%),
+  200: lighten($accent, 15%),
+  300: lighten($accent, 10%),
+  400: lighten($accent, 5%),
+  500: $accent,
+  600: darken($accent, 10%),
+  700: darken($accent, 15%),
+  800: darken($accent, 20%),
+  900: darken($accent, 25%),
+  contrast: (
+    50: $text,
+    100: $text,
+    200: $text,
+    300: $text,
+    400: $text,
+    500: $text,
+    600: $text,
+    700: $text,
+    800: $text,
+    900: $text,
+  ),
+);
+
+@include mat.core();
+
+$menu-speaker-bene-arte-cafe-primary: mat.define-palette($custom-palette);
+$menu-speaker-bene-arte-cafe-accent: mat.define-palette($custom-palette-accent);
+$menu-speaker-bene-arte-cafe-typography: mat.define-typography-config(
+  $font-family: "inherit",
+);
+$menu-speaker-bene-arte-cafe-theme: mat.define-light-theme(
+  (
+    color: (
+      primary: $menu-speaker-bene-arte-cafe-primary,
+      accent: $menu-speaker-bene-arte-cafe-accent,
+    ),
+    typography: $menu-speaker-bene-arte-cafe-typography,
+  )
+);
+
+@include mat.all-component-themes($menu-speaker-bene-arte-cafe-theme);
