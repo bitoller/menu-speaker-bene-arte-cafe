@@ -1,29 +1,74 @@
 <mat-toolbar color="accent" class="d-flex justify-content-center w-100">
-  <a
-    mat-button
-    [color]="rla.isActive ? 'primary' : ''"
-    routerLink="/instructions"
-    [routerLinkActive]="['is-active']"
-    #rla="routerLinkActive"
-  >
-    INSTRUÇÕES
-  </a>
-  <a
-    mat-button
-    [color]="rla.isActive ? 'primary' : ''"
-    routerLink="/bene-arte-cafe"
-    [routerLinkActive]="['is-active']"
-    #rla="routerLinkActive"
-    >BENÊ ARTE E CAFÉ</a
-  >
-  <a
-    mat-button
-    [color]="rla.isActive ? 'primary' : ''"
-    routerLink="/menu"
-    [routerLinkActive]="['is-active']"
-    #rla="routerLinkActive"
-    >CARDÁPIO</a
-  >
+  <span class="d-none d-md-flex">
+    <button
+      class="text-uppercase"
+      mat-button
+      routerLink="/instructions"
+      [routerLinkActive]="['is-active']"
+    >
+      INSTRUÇÕES
+    </button>
+    <button
+      class="text-uppercase"
+      mat-button
+      routerLink="/bene-arte-cafe"
+      [routerLinkActive]="['is-active']"
+    >
+      BENÊ ARTE E CAFÉ
+    </button>
+    <button
+      class="text-uppercase"
+      mat-button
+      routerLink="/menu"
+      [routerLinkActive]="['is-active']"
+    >
+      CARDÁPIO
+    </button>
+  </span>
+  <span class="flex-grow-1 flex-md-grow-0"></span>
+  <button class="d-flex d-md-none" mat-icon-button (click)="drawer.toggle()">
+    <mat-icon>menu</mat-icon>
+  </button>
 </mat-toolbar>
-
-<router-outlet></router-outlet>
+<mat-sidenav-container>
+  <mat-sidenav
+    #drawer
+    class="sidenav"
+    [mode]="'over'"
+    [fixedInViewport]="false"
+    [fixedTopGap]="64"
+    [opened]="false"
+    [position]="'end'"
+  >
+    <aside>
+      <mat-nav-list class="d-flex align-items-start flex-column h-100 p-0">
+        <a
+          class="list-item text-uppercase"
+          mat-list-item
+          routerLink="/instructions"
+          [routerLinkActive]="['is-active']"
+          >INSTRUÇÕES</a
+        >
+        <a
+          class="list-item text-uppercase"
+          mat-list-item
+          routerLink="/bene-arte-cafe"
+          [routerLinkActive]="['is-active']"
+          >BENÊ ARTE E CAFÉ</a
+        >
+        <a
+          class="list-item text-uppercase"
+          mat-list-item
+          routerLink="/menu"
+          [routerLinkActive]="['is-active']"
+          >CARDÁPIO</a
+        >
+      </mat-nav-list>
+    </aside>
+  </mat-sidenav>
+  <mat-sidenav-content>
+    <main class="pt-5">
+      <router-outlet></router-outlet>
+    </main>
+  </mat-sidenav-content>
+</mat-sidenav-container>

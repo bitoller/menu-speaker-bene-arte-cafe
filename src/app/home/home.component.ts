@@ -1,13 +1,8 @@
-import {
-  AfterViewInit,
-  Component,
-  ElementRef,
-  HostListener,
-  ViewChild,
-} from '@angular/core';
+import { Component, HostListener, inject } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { MatButtonModule } from '@angular/material/button';
 import { Router, RouterModule } from '@angular/router';
+import { AudioService } from '../_shared/services/audio.service';
 
 @Component({
   selector: 'app-home',
@@ -16,16 +11,32 @@ import { Router, RouterModule } from '@angular/router';
   templateUrl: './home.component.html',
   styleUrls: ['./home.component.scss'],
 })
-export class HomeComponent implements AfterViewInit {
-  @ViewChild('audio') audio!: ElementRef;
+export class HomeComponent {
+  audioService = inject(AudioService);
   @HostListener('window:keyup', ['$event'])
   keyEvent(event: KeyboardEvent) {
-    if (event.key == '5') {
-      this._router.navigateByUrl('/instructions');
+    switch (event.key) {
+      case '5':
+        this.nextScreen();
+        break;
+      case '0':
+        this.playAudio();
+        break;
+      default:
+        break;
     }
   }
+
   constructor(private _router: Router) {}
-  ngAfterViewInit() {
-    this.audio.nativeElement.play();
+
+  playAudio() {
+    this.audioService.play('./assets/home/audio-home.mp3');
+  }
+
+  nextScreen() {
+    this.audioService.next();
+    setTimeout(() => {
+      this._router.navigateByUrl('/instructions');
+    }, 15);
   }
 }

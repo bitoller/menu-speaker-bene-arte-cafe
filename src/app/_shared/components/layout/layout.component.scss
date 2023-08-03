@@ -2,10 +2,29 @@
 
 $height: 64px;
 
+main {
+  min-height: calc(100vh - $height);
+}
+
 .mat-toolbar-row {
   height: $height;
 }
 
-.is-active {
+.is-active,
+.is-active ::ng-deep .mdc-list-item__primary-text {
   font-weight: bold;
+}
+
+.sidenav {
+  width: 240px;
+}
+
+.mat-drawer,
+.mat-drawer-inner-container,
+.mat-drawer-container {
+  background-color: $background;
+}
+
+.mat-drawer-container {
+  min-height: calc(100vh - $height);
 }
