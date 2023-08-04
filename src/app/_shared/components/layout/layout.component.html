@@ -67,8 +67,15 @@
     </aside>
   </mat-sidenav>
   <mat-sidenav-content>
-    <main class="pt-5">
+    <main class="py-5">
       <router-outlet></router-outlet>
     </main>
+    <mat-toolbar color="accent" class="d-flex justify-content-center w-100">
+      <span class="author"
+        >©bitoller
+        <a href="https://www.linkedin.com/in/bianca-toller/" target="_blank">
+          <fa-icon [icon]="faLinkedin"></fa-icon></a
+      ></span>
+    </mat-toolbar>
   </mat-sidenav-content>
 </mat-sidenav-container>

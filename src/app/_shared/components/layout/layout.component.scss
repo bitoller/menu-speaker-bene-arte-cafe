@@ -3,10 +3,19 @@
 $height: 64px;
 
 main {
-  min-height: calc(100vh - $height);
+  min-height: calc(100vh - $height - $height);
 }
 
-.mat-toolbar-row {
+a {
+  color: inherit;
+}
+
+.author {
+  font-weight: 200;
+}
+
+.mat-toolbar-row,
+.mat-toolbar-single-row {
   height: $height;
 }
 
@@ -26,5 +35,5 @@ main {
 }
 
 .mat-drawer-container {
-  min-height: calc(100vh - $height);
+  min-height: calc(100vh - $height - $height);
 }
