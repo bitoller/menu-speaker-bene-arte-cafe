@@ -26,35 +26,10 @@ $custom-palette: (
   ),
 );
 
-$custom-palette-accent: (
-  50: lighten($accent, 25%),
-  100: lighten($accent, 20%),
-  200: lighten($accent, 15%),
-  300: lighten($accent, 10%),
-  400: lighten($accent, 5%),
-  500: $accent,
-  600: darken($accent, 10%),
-  700: darken($accent, 15%),
-  800: darken($accent, 20%),
-  900: darken($accent, 25%),
-  contrast: (
-    50: $text,
-    100: $text,
-    200: $text,
-    300: $text,
-    400: $text,
-    500: $text,
-    600: $text,
-    700: $text,
-    800: $text,
-    900: $text,
-  ),
-);
-
 @include mat.core();
 
 $menu-speaker-bene-arte-cafe-primary: mat.define-palette($custom-palette);
-$menu-speaker-bene-arte-cafe-accent: mat.define-palette($custom-palette-accent);
+$menu-speaker-bene-arte-cafe-accent: mat.define-palette($custom-palette);
 $menu-speaker-bene-arte-cafe-typography: mat.define-typography-config(
   $font-family: "inherit",
 );
