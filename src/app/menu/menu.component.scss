@@ -1,0 +1,20 @@
+@import "./../../palette.scss";
+
+.product-name {
+  font-weight: bold;
+  font-size: 1.25rem;
+  color: $primary;
+}
+
+.product-price {
+  font-weight: 500;
+  font-size: 1.1rem;
+}
+
+.add {
+  color: $primary;
+}
+
+.remove {
+  color: #b85353;
+}

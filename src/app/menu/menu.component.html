@@ -1,19 +1,60 @@
 <div class="container">
-  <div class="row justify-content-center align-items-center">
-    <div class="col-12 col-md-6">
-      <!-- <img
-        src="./assets/logos/bene-cafe-logo.jpg"
-        alt="logo do benê arte e café"
-        class="logo-ms"
-      /> -->
+  <div class="row justify-content-center">
+    <div class="col-12 col-md-6 mb-3 mb-md-0">
+      <img
+        [src]="productService.products()[currentProduct].image"
+        [alt]="
+          productService.products()[currentProduct].name +
+          ' - ' +
+          productService.products()[currentProduct].description
+        "
+        class="w-100 h-auto"
+      />
     </div>
-    <div class="col-12 col-md-6 text-center"></div>
+    <div class="col-12 col-md-6">
+      <p class="product-name">
+        {{ productService.products()[currentProduct].name }}
+      </p>
+      <p>{{ productService.products()[currentProduct].description }}</p>
+      <p class="product-price">
+        {{ productService.products()[currentProduct].price | currency : "R$" }}
+      </p>
+      <div class="d-flex gap-3">
+        <button mat-button class="add">
+          <fa-icon [icon]="faCartPlus"></fa-icon> Adicionar
+        </button>
+        <button mat-button class="remove">
+          <fa-icon [icon]="faTrash"></fa-icon> Remover
+        </button>
+      </div>
+    </div>
   </div>
   <div class="row justify-content-center mt-3">
+    <div class="col-6 col-lg-3 text-center">
+      <button mat-flat-button color="accent" (click)="nextScreen()">
+        Produto anterior
+      </button>
+    </div>
+    <div class="col-6 col-lg-3 text-center">
+      <button mat-flat-button color="accent" (click)="nextScreen()">
+        Próximo produto
+      </button>
+    </div>
+  </div>
+  <div class="row justify-content-center my-3">
+    <div class="col-12"><mat-divider></mat-divider></div>
+  </div>
+  <div class="row justify-content-center">
+    <div class="col-6 col-lg-3"></div>
+  </div>
+  <div class="row justify-content-center">
     <div class="col-6 col-lg-3 text-center">
       <button mat-flat-button color="accent" (click)="previousScreen()">
         Voltar
       </button>
+    </div>
+    <div class="col-6 col-lg-3 text-center">
+      <button mat-button (click)="callWaiter()">Chamar garçom</button>
     </div>
     <div class="col-6 col-lg-3 text-center">
       <button mat-flat-button color="accent" (click)="nextScreen()">

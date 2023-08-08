@@ -32,6 +32,11 @@ export class AudioService {
     this.play(src);
   }
 
+  removeFromCart() {
+    let src = '';
+    this.play(src);
+  }
+
   back() {
     let src = './assets/audios/audio-back.mp3';
     this.play(src);
