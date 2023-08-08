@@ -4,11 +4,18 @@ import { MatListModule } from '@angular/material/list';
 import { MatButtonModule } from '@angular/material/button';
 import { Router, RouterModule } from '@angular/router';
 import { AudioService } from '../_shared/services/audio.service';
+import { MatDividerModule } from '@angular/material/divider';
 
 @Component({
   selector: 'app-instructions',
   standalone: true,
-  imports: [CommonModule, MatListModule, MatButtonModule, RouterModule],
+  imports: [
+    CommonModule,
+    MatListModule,
+    MatButtonModule,
+    RouterModule,
+    MatDividerModule,
+  ],
   templateUrl: './instructions.component.html',
   styleUrls: ['./instructions.component.scss'],
 })
@@ -19,6 +26,9 @@ export class InstructionsComponent {
     switch (event.key) {
       case '0':
         this.playAudio();
+        break;
+      case '1':
+        this.callWaiter();
         break;
       case '4':
         this.previousScreen();
@@ -43,11 +53,15 @@ export class InstructionsComponent {
       this._router.navigateByUrl('/bene-arte-cafe');
     }, 15);
   }
-  
+
   previousScreen() {
     this.audioService.back();
     setTimeout(() => {
       this._router.navigateByUrl('/home');
     }, 15);
+  }
+
+  callWaiter() {
+    this.audioService.waiter();
   }
 }

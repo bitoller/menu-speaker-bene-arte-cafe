@@ -3,11 +3,12 @@ import { CommonModule } from '@angular/common';
 import { MatButtonModule } from '@angular/material/button';
 import { Router, RouterModule } from '@angular/router';
 import { AudioService } from '../_shared/services/audio.service';
+import { MatDividerModule } from '@angular/material/divider';
 
 @Component({
   selector: 'app-bene-arte-cafe',
   standalone: true,
-  imports: [CommonModule, MatButtonModule, RouterModule],
+  imports: [CommonModule, MatButtonModule, RouterModule, MatDividerModule],
   templateUrl: './bene-arte-cafe.component.html',
   styleUrls: ['./bene-arte-cafe.component.scss'],
 })
@@ -18,6 +19,9 @@ export class BeneArteCafeComponent {
     switch (event.key) {
       case '0':
         this.playAudio();
+        break;
+      case '1':
+        this.callWaiter();
         break;
       case '4':
         this.previousScreen();
@@ -48,5 +52,9 @@ export class BeneArteCafeComponent {
     setTimeout(() => {
       this._router.navigateByUrl('/instructions');
     }, 15);
+  }
+
+  callWaiter() {
+    this.audioService.waiter();
   }
 }
