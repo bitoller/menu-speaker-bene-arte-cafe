@@ -1,0 +1,31 @@
+<div class="container">
+  <div class="row justify-content-center align-items-center">
+    <div class="col-12 col-lg-6 text-center">
+      <p class="total">Resumo do Pedido</p>
+      <mat-list
+        role="list"
+        *ngIf="cartService.cartList().length > 0; else emptyCart"
+      >
+        <mat-list-item
+          class="text-start h-auto mb-3"
+          role="listitem"
+          *ngFor="let item of cartService.cartList()"
+        >
+          <span class="text-wrap d-flex"
+            >{{ item.amount! > 1 ? item.amount + "x" : null }}
+            {{ item.name }}
+            <span class="flex-grow-1"></span>
+            {{ item.price * item.amount! | currency : "R$" }}</span
+          ></mat-list-item
+        ></mat-list
+      >
+      <ng-template #emptyCart>
+        <p class="my-4">O carrinho está vazio.</p>
+      </ng-template>
+      <p class="total" *ngIf="cartService.cartList().length > 0">
+        Total: {{ total | currency : "R$" }}
+      </p>
+    </div>
+  </div>
+  <app-action-buttons previousUrl="/menu" nextUrl="/" />
+</div>
