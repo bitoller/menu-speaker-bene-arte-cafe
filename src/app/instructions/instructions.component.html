@@ -10,46 +10,15 @@
     <div class="col-12 col-md-6 text-center">
       <mat-list role="list">
         <mat-list-item class="text-start h-auto mb-3" role="listitem"
-          ><span class="text-wrap"
+          ><span class="text-wrap instructions"
             >Seja bem vindo a aba de instruções de uso.</span
           ></mat-list-item
         >
         <mat-list-item class="text-start h-auto mb-3" role="listitem"
           ><span class="text-wrap"
-            >Caso queira pular as instruções e ir para a próxima aba, aperte
-            "5".</span
-          ></mat-list-item
-        >
-        <mat-list-item class="text-start h-auto mb-3" role="listitem"
-          ><span class="text-wrap"
-            >Para avançar para uma próxima aba ou um próximo item do cardápio,
-            aperte "5".</span
-          ></mat-list-item
-        >
-        <mat-list-item class="text-start h-auto mb-3" role="listitem"
-          ><span class="text-wrap"
-            >Para pular um item do cardápio, aperte "7".</span
-          ></mat-list-item
-        >
-        <mat-list-item class="text-start h-auto mb-3" role="listitem"
-          ><span class="text-wrap"
-            >Para repetir o áudio de um produto ou aba, aperte "8".</span
-          ></mat-list-item
-        >
-        <mat-list-item class="text-start h-auto mb-3" role="listitem"
-          ><span class="text-wrap"
-            >Para colocar um item no carrinho, aperte "9".</span
-          ></mat-list-item
-        >
-        <mat-list-item class="text-start h-auto mb-3" role="listitem"
-          ><span class="text-wrap"
-            >Para voltar a uma aba anterior ou ao um item do cardápio passado
-            anteriormente, aperte "4".</span
-          ></mat-list-item
-        >
-        <mat-list-item class="text-start h-auto mb-3" role="listitem"
-          ><span class="text-wrap"
-            >Para finalizar o seu pedido, aperte "6".</span
+            >Para escutar o áudio principal da aba, escutar o áudio dos produtos
+            na aba do cardápio ou repetir o áudio de cada produto na aba do
+            cardápio, aperte "0".</span
           ></mat-list-item
         >
         <mat-list-item class="text-start h-auto mb-3" role="listitem"
@@ -58,22 +27,50 @@
             dúvida ou pedir a conta, aperte "1".</span
           ></mat-list-item
         >
+        <mat-list-item class="text-start h-auto mb-3" role="listitem"
+          ><span class="text-wrap"
+            >Para voltar para o produto anterior na aba do cardápio, aperte
+            "2".</span
+          ></mat-list-item
+        >
+        <mat-list-item class="text-start h-auto mb-3" role="listitem"
+          ><span class="text-wrap"
+            >Para ir para o próximo produto na aba do cardápio, aperte
+            "3".</span
+          ></mat-list-item
+        >
+        <mat-list-item class="text-start h-auto mb-3" role="listitem"
+          ><span class="text-wrap"
+            >Para voltar a uma aba anterior, aperte "4".</span
+          ></mat-list-item
+        >
+        <mat-list-item class="text-start h-auto mb-3" role="listitem"
+          ><span class="text-wrap"
+            >Para ir para a próxima aba, aperte "5".</span
+          ></mat-list-item
+        >
+        <mat-list-item class="text-start h-auto mb-3" role="listitem"
+          ><span class="text-wrap"
+            >Para finalizar o seu pedido na aba do cardápio, aperte "6".</span
+          ></mat-list-item
+        >
+        <mat-list-item class="text-start h-auto mb-3" role="listitem"
+          ><span class="text-wrap"
+            >Para remover um item do carrinho na aba de cardápio, aperte
+            "7".</span
+          ></mat-list-item
+        >
+        <mat-list-item class="text-start h-auto mb-3" role="listitem"
+          ><span class="text-wrap"
+            >Para adicionar um item ao carrinho na aba de cardápio, aperte
+            "9".</span
+          ></mat-list-item
+        >
+        <mat-list-item class="text-start h-auto mb-3" role="listitem"
+          ><span class="text-wrap"></span
+        ></mat-list-item>
       </mat-list>
     </div>
   </div>
-  <div class="row justify-content-center my-3">
-    <div class="col-12"><mat-divider></mat-divider></div>
-  </div>
-  <div class="row justify-content-center mt-3">
-    <div class="col-6 col-lg-3 text-center">
-      <button mat-flat-button color="accent" (click)="previousScreen()">
-        Voltar
-      </button>
-    </div>
-    <div class="col-6 col-lg-3 text-center">
-      <button mat-flat-button color="accent" (click)="nextScreen()">
-        Avançar
-      </button>
-    </div>
-  </div>
+  <app-action-buttons previousUrl="/home" nextUrl="/bene-arte-cafe" />
 </div>
