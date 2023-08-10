@@ -16,3 +16,18 @@ body {
   width: 100%;
   max-width: 650px;
 }
+
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: $primary;
+}
+::-webkit-scrollbar-thumb:window-inactive {
+  background: $background;
+}
+::-webkit-scrollbar-track {
+  background: $background;
+}
