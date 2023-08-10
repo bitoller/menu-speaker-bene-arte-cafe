@@ -33,6 +33,7 @@ export class AudioService {
   }
 
   removeFromCart() {
+    // TODO: adicionar audio de remover do carrinho
     let src = '';
     this.play(src);
   }

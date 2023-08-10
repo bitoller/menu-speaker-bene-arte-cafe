@@ -1,5 +1,4 @@
-import { Injectable, WritableSignal, inject, signal } from '@angular/core';
-import { CartService } from './cart.service';
+import { Injectable, WritableSignal, signal } from '@angular/core';
 import { Product } from '../interfaces/product';
 import { v4 as uuid } from 'uuid';
 

@@ -1,31 +1,32 @@
 import { Component, HostListener, inject } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { MatButtonModule } from '@angular/material/button';
-import { Router, RouterModule } from '@angular/router';
 import { AudioService } from '../_shared/services/audio.service';
 import { ProductsService } from '../_shared/services/products.service';
 import { IconDefinition } from '@fortawesome/fontawesome-svg-core';
 import { faCartPlus, faTrash } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
-import { MatDividerModule } from '@angular/material/divider';
+import { ActionButtonsComponent } from '../_shared/components/action-buttons/action-buttons.component';
+import { CartService } from '../_shared/services/cart.service';
+import { Product } from '../_shared/interfaces/product';
 
 @Component({
   selector: 'app-menu',
   standalone: true,
+  templateUrl: './menu.component.html',
+  styleUrls: ['./menu.component.scss'],
   imports: [
     CommonModule,
     MatButtonModule,
-    RouterModule,
     FontAwesomeModule,
-    MatDividerModule,
+    ActionButtonsComponent,
   ],
-  templateUrl: './menu.component.html',
-  styleUrls: ['./menu.component.scss'],
 })
 export class MenuComponent {
   audioService = inject(AudioService);
   productService = inject(ProductsService);
-  currentProduct: number = 1;
+  cartService = inject(CartService);
+  currentProduct: number = 0;
   faCartPlus: IconDefinition = faCartPlus;
   faTrash: IconDefinition = faTrash;
 
@@ -33,43 +34,59 @@ export class MenuComponent {
   keyEvent(event: KeyboardEvent) {
     switch (event.key) {
       case '0':
-        this.playAudio();
+        this.playAudio(
+          this.productService.products()[this.currentProduct].audio
+        );
         break;
-      case '1':
-        this.callWaiter();
+      case '2':
+        this.previousProduct();
         break;
-      case '4':
-        this.previousScreen();
+      case '3':
+        this.nextProduct();
         break;
-      case '5':
-        this.nextScreen();
+      case '9':
+        this.addProduct(this.productService.products()[this.currentProduct]);
+        break;
+      case '6':
+        
+        break;
+      case '7':
+        this.removeProduct(
+          this.productService.products()[this.currentProduct].id
+        );
         break;
       default:
         break;
     }
   }
 
-  constructor(private _router: Router) {}
-
-  playAudio() {
-    this.audioService.play('');
+  playAudio(audio: string) {
+    this.audioService.play(audio);
   }
 
-  nextScreen() {
-    this.audioService.next();
-    setTimeout(() => {
-      this._router.navigateByUrl('');
-    }, 15);
+  previousProduct() {
+    if (this.currentProduct > 0) {
+      this.currentProduct -= 1;
+      // TODO: tocar audio do botao de voltar produto
+      this.playAudio(this.productService.products()[this.currentProduct].audio);
+    }
   }
 
-  previousScreen() {
-    this.audioService.back();
-    setTimeout(() => {
-      this._router.navigateByUrl('/bene-arte-cafe');
-    }, 15);
+  nextProduct() {
+    if (this.currentProduct < this.productService.products().length) {
+      this.currentProduct += 1;
+      // TODO: tocar audio do botao de proximo produto
+      this.playAudio(this.productService.products()[this.currentProduct].audio);
+    }
   }
 
-  callWaiter() {
-    this.audioService.waiter();
+  addProduct(product: Product) {
+    this.audioService.addToCart();
+    this.cartService.add(product);
+  }
+
+  removeProduct(id: string) {
+    this.audioService.removeFromCart();
+    this.cartService.remove(id);
   }
 }
