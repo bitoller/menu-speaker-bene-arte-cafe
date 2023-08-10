@@ -34,7 +34,7 @@ Sejam bem-vindos e aproveitem cada momento nesse cantinho especial.
 5 = passar pra proxima pagina
 6 = finalizar pedido (pagina de cardapio)
 7 = remover do carrinho (pagina de cardapio)
-8 =
+8 = nao especificado
 9 = adicionar ao carrinho (pagina de cardapio)
 
 // TODO: criar audio de voltar produto
