@@ -1,0 +1,15 @@
+<mat-divider class="my-3"></mat-divider>
+<div class="d-flex justify-content-around my-3 w-100">
+  <button mat-flat-button color="accent" (click)="previousScreen()">
+    Voltar
+  </button>
+  <button mat-button (click)="callWaiter()">Chamar garçom</button>
+  <button
+    mat-flat-button
+    color="accent"
+    (click)="nextScreen()"
+    *ngIf="nextUrl != '/'"
+  >
+    {{ nextUrl == "/cart" ? "Finalizar" : "Avançar" }}
+  </button>
+</div>
