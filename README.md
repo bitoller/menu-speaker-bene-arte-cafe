@@ -34,7 +34,7 @@ You'll also find buttons available to navigate back to the previous screen and t
 - `TypeScript`: Will provide all the functionalities of the application.
 - `Angular 16.1.6`: Transforms the application into a Single Page Application (SPA).
 
-## ✔️ Libraries Used
+## ✔️ Libraries and Frameworks Used
 
 - bootstrap `version 5.3.1`
 - angular fontawesome `version 0.13.0`
