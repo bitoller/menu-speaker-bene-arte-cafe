@@ -42,3 +42,4 @@ Sejam bem-vindos e aproveitem cada momento nesse cantinho especial.
 // TODO: criar audio de remover do carrinho
 // TODO: mudar audio de instruções
 // TODO: decidir se o texto da aba de instruções está bom ou não.
+test
