@@ -48,12 +48,14 @@ export class MenuComponent {
         this.addProduct(this.productService.products()[this.currentProduct]);
         break;
       case '6':
-        
         break;
       case '7':
         this.removeProduct(
           this.productService.products()[this.currentProduct].id
         );
+        break;
+      case '8':
+        this.audioService.instructions();
         break;
       default:
         break;
@@ -67,7 +69,6 @@ export class MenuComponent {
   previousProduct() {
     if (this.currentProduct > 0) {
       this.currentProduct -= 1;
-      // TODO: tocar audio do botao de voltar produto
       this.playAudio(this.productService.products()[this.currentProduct].audio);
     }
   }
@@ -75,7 +76,6 @@ export class MenuComponent {
   nextProduct() {
     if (this.currentProduct < this.productService.products().length) {
       this.currentProduct += 1;
-      // TODO: tocar audio do botao de proximo produto
       this.playAudio(this.productService.products()[this.currentProduct].audio);
     }
   }

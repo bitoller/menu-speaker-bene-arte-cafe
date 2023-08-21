@@ -17,14 +17,11 @@ export class InstructionsComponent {
   keyEvent(event: KeyboardEvent) {
     switch (event.key) {
       case '0':
-        this.playAudio();
+      case '8':
+        this.audioService.instructions();
         break;
       default:
         break;
     }
-  }
-
-  playAudio() {
-    this.audioService.play('./assets/instructions/audio-instructions.mp3');
   }
 }

@@ -18,6 +18,9 @@ export class BeneArteCafeComponent {
       case '0':
         this.playAudio();
         break;
+      case '8':
+        this.audioService.instructions();
+        break;
       default:
         break;
     }

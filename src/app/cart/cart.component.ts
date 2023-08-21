@@ -5,14 +5,20 @@ import { CartService } from '../_shared/services/cart.service';
 import { AudioService } from '../_shared/services/audio.service';
 import { MatButtonModule } from '@angular/material/button';
 import { Router, RouterModule } from '@angular/router';
-import { ActionButtonsComponent } from "../_shared/components/action-buttons/action-buttons.component";
+import { ActionButtonsComponent } from '../_shared/components/action-buttons/action-buttons.component';
 
 @Component({
-    selector: 'app-cart',
-    standalone: true,
-    templateUrl: './cart.component.html',
-    styleUrls: ['./cart.component.scss'],
-    imports: [CommonModule, MatListModule, MatButtonModule, RouterModule, ActionButtonsComponent]
+  selector: 'app-cart',
+  standalone: true,
+  templateUrl: './cart.component.html',
+  styleUrls: ['./cart.component.scss'],
+  imports: [
+    CommonModule,
+    MatListModule,
+    MatButtonModule,
+    RouterModule,
+    ActionButtonsComponent,
+  ],
 })
 export class CartComponent implements OnInit {
   cartService = inject(CartService);
@@ -30,6 +36,9 @@ export class CartComponent implements OnInit {
     switch (event.key) {
       case '4':
         this.previousScreen();
+        break;
+      case '8':
+        this.audioService.instructions();
         break;
       default:
         break;

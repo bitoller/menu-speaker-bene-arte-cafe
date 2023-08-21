@@ -16,11 +16,14 @@ export class HomeComponent {
   @HostListener('window:keyup', ['$event'])
   keyEvent(event: KeyboardEvent) {
     switch (event.key) {
+      case '0':
+        this.playAudio();
+        break;
       case '5':
         this.nextScreen();
         break;
-      case '0':
-        this.playAudio();
+      case '8':
+        this.audioService.instructions();
         break;
       default:
         break;
