@@ -42,7 +42,7 @@ You'll also find buttons available to navigate back to the previous screen and t
 
 ## ⌛ Project Status
 
-The project is finished.
+The project has been completed.
 
 ## 📁 Project Access
 
