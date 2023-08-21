@@ -42,7 +42,7 @@ You'll also find buttons available to navigate back to the previous screen and t
 
 ## ⌛ Project Status
 
-Awaiting the client to provide the remaining audio files.
+The project is finished.
 
 ## 📁 Project Access
 
