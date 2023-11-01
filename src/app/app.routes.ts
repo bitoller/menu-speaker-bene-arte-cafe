@@ -13,7 +13,7 @@ export const routes: Routes = [
     children: [
       { path: 'home', component: HomeComponent },
       { path: 'instructions', component: InstructionsComponent },
-      { path: 'bene-arte-cafe', component: BeneArteCafeComponent },
+      { path: 'workshop', component: BeneArteCafeComponent },
       { path: 'menu', component: MenuComponent },
       { path: 'cart', component: CartComponent },
       { path: '', redirectTo: 'home', pathMatch: 'full' },

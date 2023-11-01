@@ -17,18 +17,16 @@ export class ProductsService {
         image: './assets/menu/caze-mousse.jpeg',
         description: 'Mousse de maracujá com ganache de chocolate meio amargo.',
         price: 12,
-        audio: './assets/menu/audio-cafe.mp3',
-        //TODO: alterar audio do produto
+        audio: './assets/menu/audio-caze-mousse.mp3',
       },
       {
         id: uuid(),
         name: 'Honeyworks',
         image: './assets/menu/honeyworks.jpeg',
         description:
-          'Borbulhante hidromel da abelha Jataí feito pela empresa MBEE.',
+          'Borbulhante de hidromel da abelha Jataí feito pela empresa MBEE, 750ml.',
         price: 150,
-        audio: './assets/menu/audio-misto.mp3',
-        //TODO: alterar audio do produto
+        audio: './assets/menu/audio-honeyworks.mp3',
       },
       {
         id: uuid(),
@@ -36,8 +34,7 @@ export class ProductsService {
         image: './assets/menu/pudim.jpeg',
         description: 'Magic Pastry. Pudim de leite condensado.',
         price: 12,
-        audio: './assets/menu/audio-pao.mp3',
-        //TODO: alterar audio do produto
+        audio: './assets/menu/audio-pudim.mp3',
       },
       {
         id: uuid(),
@@ -45,8 +42,7 @@ export class ProductsService {
         image: './assets/menu/mousse.jpeg',
         description: 'Mousse de maracujá com chocolate.',
         price: 15,
-        audio: './assets/menu/audio-torta.mp3',
-        //TODO: alterar audio do produto
+        audio: './assets/menu/audio-mousse.mp3',
       },
       {
         id: uuid(),
@@ -55,7 +51,6 @@ export class ProductsService {
         description: 'Torta de amêndoas.',
         price: 15,
         audio: './assets/menu/audio-torta.mp3',
-        //TODO: alterar audio do produto
       },
       {
         id: uuid(),
@@ -63,9 +58,8 @@ export class ProductsService {
         image: './assets/menu/sanduiche.jpeg',
         description:
           'Sanduíche de pernil com Molho BBQ agridoce e defumado feito com melado de cana. Acompanha batatas fritas.',
-        price: 15,
-        audio: './assets/menu/audio-torta.mp3',
-        //TODO: alterar audio do produto
+        price: 20,
+        audio: './assets/menu/audio-bbq.mp3',
       },
       {
         id: uuid(),
@@ -74,8 +68,7 @@ export class ProductsService {
         description:
           'Sanduíche de pão pita recheado com frango grelhado, legumes frescos e molho refrescante de iogurte com pepino, conhecido como tzatziki.',
         price: 14,
-        audio: './assets/menu/audio-torta.mp3',
-        //TODO: alterar audio do produto
+        audio: './assets/menu/audio-pita.mp3',
       },
       {
         id: uuid(),
@@ -84,8 +77,7 @@ export class ProductsService {
         description:
           'Drink Basil Smash: gin com limão, xarope de açúcar e manjericão. Harmoniza com escalope de vieira e espuma de cajú.',
         price: 45,
-        audio: './assets/menu/audio-torta.mp3',
-        //TODO: alterar audio do produto
+        audio: './assets/menu/audio-basil.mp3',
       },
       {
         id: uuid(),
@@ -93,9 +85,8 @@ export class ProductsService {
         image: './assets/menu/manhattan.jpeg',
         description:
           'Drink Manhattan: bitter, vermute rosso, bourbon e cereja. Harmoniza com Ópera de caramelo salgado e Whisky.',
-        price: 15,
-        audio: './assets/menu/audio-torta.mp3',
-        //TODO: alterar audio do produto
+        price: 39,
+        audio: './assets/menu/audio-manhattan.mp3',
       },
     ] as Product[];
   }
