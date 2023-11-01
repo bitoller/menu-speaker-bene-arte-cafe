@@ -14,7 +14,7 @@ export class ProductsService {
       {
         id: uuid(),
         name: 'Cazé Mousses',
-        image: './assets/menu/caze-mousse.jpeg',
+        image: './assets/menu/caze-mousse.jpg',
         description: 'Mousse de maracujá com ganache de chocolate meio amargo.',
         price: 12,
         audio: './assets/menu/audio-caze-mousse.mp3',
@@ -22,7 +22,7 @@ export class ProductsService {
       {
         id: uuid(),
         name: 'Honeyworks',
-        image: './assets/menu/honeyworks.jpeg',
+        image: './assets/menu/honeyworks.jpg',
         description:
           'Borbulhante de hidromel da abelha Jataí feito pela empresa MBEE, 750ml.',
         price: 150,
@@ -31,7 +31,7 @@ export class ProductsService {
       {
         id: uuid(),
         name: 'Pudim',
-        image: './assets/menu/pudim.jpeg',
+        image: './assets/menu/pudim.jpg',
         description: 'Magic Pastry. Pudim de leite condensado.',
         price: 12,
         audio: './assets/menu/audio-pudim.mp3',
@@ -39,7 +39,7 @@ export class ProductsService {
       {
         id: uuid(),
         name: 'Mousse de Maracujá',
-        image: './assets/menu/mousse.jpeg',
+        image: './assets/menu/mousse.jpg',
         description: 'Mousse de maracujá com chocolate.',
         price: 15,
         audio: './assets/menu/audio-mousse.mp3',
@@ -47,7 +47,7 @@ export class ProductsService {
       {
         id: uuid(),
         name: 'Torta',
-        image: './assets/menu/torta.jpeg',
+        image: './assets/menu/torta.jpg',
         description: 'Torta de amêndoas.',
         price: 15,
         audio: './assets/menu/audio-torta.mp3',
@@ -55,7 +55,7 @@ export class ProductsService {
       {
         id: uuid(),
         name: 'Pira no BBQ',
-        image: './assets/menu/sanduiche.jpeg',
+        image: './assets/menu/bbq.jpg',
         description:
           'Sanduíche de pernil com Molho BBQ agridoce e defumado feito com melado de cana. Acompanha batatas fritas.',
         price: 20,
@@ -64,7 +64,7 @@ export class ProductsService {
       {
         id: uuid(),
         name: 'Pita do Novinha',
-        image: './assets/menu/tzatziki.jpeg',
+        image: './assets/menu/pita.jpg',
         description:
           'Sanduíche de pão pita recheado com frango grelhado, legumes frescos e molho refrescante de iogurte com pepino, conhecido como tzatziki.',
         price: 14,
@@ -73,7 +73,7 @@ export class ProductsService {
       {
         id: uuid(),
         name: 'Drink Basil Smash',
-        image: './assets/menu/basil-smash.jpeg',
+        image: './assets/menu/basil.jpg',
         description:
           'Drink Basil Smash: gin com limão, xarope de açúcar e manjericão. Harmoniza com escalope de vieira e espuma de cajú.',
         price: 45,
@@ -82,7 +82,7 @@ export class ProductsService {
       {
         id: uuid(),
         name: 'Drink Manhattan',
-        image: './assets/menu/manhattan.jpeg',
+        image: './assets/menu/manhattan.jpg',
         description:
           'Drink Manhattan: bitter, vermute rosso, bourbon e cereja. Harmoniza com Ópera de caramelo salgado e Whisky.',
         price: 39,
