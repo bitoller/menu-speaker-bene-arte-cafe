@@ -27,6 +27,6 @@ export class BeneArteCafeComponent {
   }
 
   playAudio() {
-    this.audioService.play('./assets/bene/audio-bene.mp3');
+    this.audioService.play('./assets/bene/audio-senac.mp3');
   }
 }

@@ -13,39 +13,89 @@ export class ProductsService {
     return [
       {
         id: uuid(),
-        name: 'Café Coado',
-        image: './assets/menu/cafe.jpg',
-        description:
-          'Café especial do produtor Terra de Kuri passado no coador de pano.',
-        price: 5,
+        name: 'Cazé Mousses',
+        image: './assets/menu/caze-mousse.jpeg',
+        description: 'Mousse de maracujá com ganache de chocolate meio amargo.',
+        price: 12,
         audio: './assets/menu/audio-cafe.mp3',
+        //TODO: alterar audio do produto
       },
       {
         id: uuid(),
-        name: 'Misto Quente',
-        image: './assets/menu/misto.jpg',
+        name: 'Honeyworks',
+        image: './assets/menu/honeyworks.jpeg',
         description:
-          'Duas deliciosas fatias da famosa receita de Pão da Benê com presunto e mussarela. Um delicioso e quentinho sanduíche.',
-        price: 13,
+          'Borbulhante hidromel da abelha Jataí feito pela empresa MBEE.',
+        price: 150,
         audio: './assets/menu/audio-misto.mp3',
+        //TODO: alterar audio do produto
       },
       {
         id: uuid(),
-        name: 'Pão Benê com Manteiga na Chapa',
-        image: './assets/menu/pao.jpg',
-        description:
-          'Duas fatias da famosa receita de pão caseiro da Benê feito com manteiga na chapa.',
-        price: 7,
+        name: 'Pudim',
+        image: './assets/menu/pudim.jpeg',
+        description: 'Magic Pastry. Pudim de leite condensado.',
+        price: 12,
         audio: './assets/menu/audio-pao.mp3',
+        //TODO: alterar audio do produto
       },
       {
         id: uuid(),
-        name: 'Torta de Frango Cremosa',
-        image: './assets/menu/torta.jpg',
-        description:
-          'Fatia de torta com massa amanteigada e recheio de frango desfiado com requeijão.',
+        name: 'Mousse de Maracujá',
+        image: './assets/menu/mousse.jpeg',
+        description: 'Mousse de maracujá com chocolate.',
         price: 15,
         audio: './assets/menu/audio-torta.mp3',
+        //TODO: alterar audio do produto
+      },
+      {
+        id: uuid(),
+        name: 'Torta',
+        image: './assets/menu/torta.jpeg',
+        description: 'Torta de amêndoas.',
+        price: 15,
+        audio: './assets/menu/audio-torta.mp3',
+        //TODO: alterar audio do produto
+      },
+      {
+        id: uuid(),
+        name: 'Pira no BBQ',
+        image: './assets/menu/sanduiche.jpeg',
+        description:
+          'Sanduíche de pernil com Molho BBQ agridoce e defumado feito com melado de cana. Acompanha batatas fritas.',
+        price: 15,
+        audio: './assets/menu/audio-torta.mp3',
+        //TODO: alterar audio do produto
+      },
+      {
+        id: uuid(),
+        name: 'Pita do Novinha',
+        image: './assets/menu/tzatziki.jpeg',
+        description:
+          'Sanduíche de pão pita recheado com frango grelhado, legumes frescos e molho refrescante de iogurte com pepino, conhecido como tzatziki.',
+        price: 14,
+        audio: './assets/menu/audio-torta.mp3',
+        //TODO: alterar audio do produto
+      },
+      {
+        id: uuid(),
+        name: 'Drink Basil Smash',
+        image: './assets/menu/basil-smash.jpeg',
+        description:
+          'Drink Basil Smash: gin com limão, xarope de açúcar e manjericão. Harmoniza com escalope de vieira e espuma de cajú.',
+        price: 45,
+        audio: './assets/menu/audio-torta.mp3',
+        //TODO: alterar audio do produto
+      },
+      {
+        id: uuid(),
+        name: 'Drink Manhattan',
+        image: './assets/menu/manhattan.jpeg',
+        description:
+          'Drink Manhattan: bitter, vermute rosso, bourbon e cereja. Harmoniza com Ópera de caramelo salgado e Whisky.',
+        price: 15,
+        audio: './assets/menu/audio-torta.mp3',
+        //TODO: alterar audio do produto
       },
     ] as Product[];
   }
