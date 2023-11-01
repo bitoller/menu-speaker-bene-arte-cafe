@@ -33,8 +33,7 @@ export class AudioService {
   }
 
   removeFromCart() {
-    // TODO: adicionar audio de remover do carrinho
-    let src = '';
+    let src = './assets/audios/audio-removefromcart.mp3';
     this.play(src);
   }
 
@@ -50,6 +49,11 @@ export class AudioService {
 
   waiter() {
     let src = './assets/audios/audio-waiter.mp3';
+    this.play(src);
+  }
+
+  instructions() {
+    let src = './assets/instructions/audio-instructions.mp3';
     this.play(src);
   }
 }
