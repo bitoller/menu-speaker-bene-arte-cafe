@@ -13,7 +13,7 @@ export class ProductsService {
     return [
       {
         id: uuid(),
-        name: 'Cazé Mousses',
+        name: 'Mousse da Cazé Mousses',
         image: './assets/menu/caze-mousse.jpg',
         description: 'Mousse de maracujá com ganache de chocolate meio amargo.',
         price: 12,
@@ -21,7 +21,7 @@ export class ProductsService {
       },
       {
         id: uuid(),
-        name: 'Honeyworks',
+        name: 'Borbulhante comercializado pela HoneyWorks',
         image: './assets/menu/honeyworks.jpg',
         description:
           'Borbulhante de hidromel da abelha Jataí feito pela empresa MBEE, 750ml.',
@@ -30,15 +30,15 @@ export class ProductsService {
       },
       {
         id: uuid(),
-        name: 'Pudim',
+        name: 'Pudim da Magic Pastry',
         image: './assets/menu/pudim.jpg',
-        description: 'Magic Pastry. Pudim de leite condensado.',
+        description: 'Pudim de leite condensado com calda de caramelo.',
         price: 12,
         audio: './assets/menu/audio-pudim.mp3',
       },
       {
         id: uuid(),
-        name: 'Mousse de Maracujá',
+        name: 'Mousse Passion da Magic Pastry',
         image: './assets/menu/mousse.jpg',
         description: 'Mousse de maracujá com chocolate.',
         price: 15,
@@ -46,15 +46,15 @@ export class ProductsService {
       },
       {
         id: uuid(),
-        name: 'Torta',
+        name: 'Torta de Amêndoas da Magic Pastry',
         image: './assets/menu/torta.jpg',
-        description: 'Torta de amêndoas.',
+        description: 'Massa sablé com creme frangipane e amêndoas.',
         price: 15,
         audio: './assets/menu/audio-torta.mp3',
       },
       {
         id: uuid(),
-        name: 'Pira no BBQ',
+        name: 'Sanduíche com Molho da Pira no BBQ',
         image: './assets/menu/bbq.jpg',
         description:
           'Sanduíche de pernil com Molho BBQ agridoce e defumado feito com melado de cana. Acompanha batatas fritas.',
@@ -63,7 +63,7 @@ export class ProductsService {
       },
       {
         id: uuid(),
-        name: 'Pita do Novinha',
+        name: 'Sanduíche do Pita do Novinha',
         image: './assets/menu/pita.jpg',
         description:
           'Sanduíche de pão pita recheado com frango grelhado, legumes frescos e molho refrescante de iogurte com pepino, conhecido como tzatziki.',
@@ -72,19 +72,19 @@ export class ProductsService {
       },
       {
         id: uuid(),
-        name: 'Drink Basil Smash',
+        name: "Drink Basil Smash da Zest's",
         image: './assets/menu/basil.jpg',
         description:
-          'Drink Basil Smash: gin com limão, xarope de açúcar e manjericão. Harmoniza com escalope de vieira e espuma de cajú.',
+          'Gin com limão, xarope de açúcar e manjericão. Harmoniza com escalope de vieira com espuma de cajú.',
         price: 45,
         audio: './assets/menu/audio-basil.mp3',
       },
       {
         id: uuid(),
-        name: 'Drink Manhattan',
+        name: "Drink Manhattan da Zest's",
         image: './assets/menu/manhattan.jpg',
         description:
-          'Drink Manhattan: bitter, vermute rosso, bourbon e cereja. Harmoniza com Ópera de caramelo salgado e Whisky.',
+          'Bitter, vermute rosso, bourbon e cereja. Harmoniza com Ópera de caramelo salgado com Whisky.',
         price: 39,
         audio: './assets/menu/audio-manhattan.mp3',
       },
