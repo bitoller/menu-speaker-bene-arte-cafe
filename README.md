@@ -46,8 +46,8 @@ The project has been completed.
 
 ## 📁 Project Access
 
-[See the Benê Arte e Café website in operation](https://bene-arte-e-cafe.vercel.app/).
-[See the Senac version of the website](https://workshopsenac.vercel.app/).
+- [See the Benê Arte e Café website in operation](https://bene-arte-e-cafe.vercel.app/).
+- [See the Senac version of the website](https://workshopsenac.vercel.app/).
 
 In this repository, you have access to all the files and codes of the application.<br/>
 
